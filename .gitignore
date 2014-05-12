@@ -1,0 +1,9 @@
+# ignore vim tmp file
+*.swp
+
+# ignore compile file
+*.[ao]
+*.so
+
+# ignore log/
+log/
