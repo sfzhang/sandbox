@@ -19,5 +19,4 @@
 # ident expand
 log=`git log -1 --pretty=format:"%h %ad %an" --date=iso --$1 | sed 's/ +[0-9]\{4\}//g'`
 info='$Id$1`"$log"'$'
-
 cat /dev/stdin | sed "s/\\\$Id\\\$/$info/g"
