@@ -1,0 +1,55 @@
+#
+#  Copyright (c) 2013, BLK Co., Ltd.  All right reserved.
+#
+#  This is unpublished proprietary information of BLK CO., Ltd and is
+#  protected as an unpublished work under applicable Copyright laws.
+#  The contents of this file may not be disclosed to third parties,
+#  copied or duplicated in any form, in whole or in part, without the 
+#  prior written permission of BLK Co., Ltd.
+#
+#  $Id$
+#
+
+#
+# Attributes for git
+#
+
+# binary file
+*.png		binary
+*.jpg		binary
+*.jpeg		binary
+*.dcm.*		binary
+*.dcm		binary
+*.MRDC.* 	binary
+*.doc		binary
+*.docx		binary
+*.xls		binary
+*.xlsx		bianry
+*.pdf		binary
+
+# text file
+README*		text
+*.qss 		text
+*.qrc 		text
+*.env 		text
+*.pro 		text
+*.proto 	text
+*.pri 		text
+*.install	text
+*.config	text
+*.sh		text
+
+# indent filter
+README*		filter=indent
+*.qss		filter=indent
+*.qrc		filter=indent
+*.env		filter=indent
+*.pro		filter=indent
+*.proto		filter=indent
+*.pri		filter=indent
+*.install	filter=indent
+*.config	filter=indent
+*.sh		filter=indent
+*.cc		filter=indent
+*.cpp		filter=indent
+*.[cCh]		filter=indent

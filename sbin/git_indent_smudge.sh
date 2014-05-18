@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #
 #  Copyright (c) 2013, BLK Co., Ltd.  All right reserved.
 #
@@ -11,32 +13,11 @@
 #
 
 #
-# Ignore files for git
+# Git smudge filter
 #
 
-# ignore directory
-bin/
-log/
-lib/
+# ident expand
+log=`git log -1 --pretty=format:"%h %ad %an" --date=iso --$1 | sed 's/ +[0-9]\{4\}//g'`
+info='$Id$1`" $log"'$'
 
-# ignore temp files when run
-*.log
-*.log.*
-
-# ignore temp files when make
-*.[ao]
-
-# ignore moc temp files with Qt
-moc_*.cpp
-
-# ignore temp files when use qmake
-Makefile
-*.user
-
-# ignore temp files when use editor
-*.swp
-*~
-*.bak
-
-# ignore all tags file for ctags
-tags
+cat /dev/stdin | sed "s/\\\$Id\\\$/$info/g"

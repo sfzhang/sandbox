@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #
 #  Copyright (c) 2013, BLK Co., Ltd.  All right reserved.
 #
@@ -11,32 +13,8 @@
 #
 
 #
-# Ignore files for git
+# Git clean filter
 #
 
-# ignore directory
-bin/
-log/
-lib/
-
-# ignore temp files when run
-*.log
-*.log.*
-
-# ignore temp files when make
-*.[ao]
-
-# ignore moc temp files with Qt
-moc_*.cpp
-
-# ignore temp files when use qmake
-Makefile
-*.user
-
-# ignore temp files when use editor
-*.swp
-*~
-*.bak
-
-# ignore all tags file for ctags
-tags
+# indent clean
+cat /dev/stdin | sed 's/\$Id[^\$]*\$/\$Id\$/g'
