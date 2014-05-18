@@ -31,7 +31,7 @@ export PATH=$PATH:$project_path/sbin
 cp $project_path/sbin/git_indent_clean.sh $project_path/sbin/.git_indent_clean.sh
 cp $project_path/sbin/git_indent_smudge.sh $project_path/sbin/.git_indent_smudge.sh
 
-# common config
+# Git config
 # user name
 echo "Please input your git user name:"
 read user_name
