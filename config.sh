@@ -110,13 +110,13 @@ if [ $? -ne 0 ]; then
 fi
 
 # filter
-git config filter.indent.clean '.git_indent_clean.sh'
+git config filter.indent.clean '.git_indent_clean.sh %f'
 if [ $? -ne 0 ]; then
 	echo "git config filter.indent.clean failed: $?"
 	exit 1
 fi
 
-git config filter.indent.smudge '.git_indent_smudge.sh'
+git config filter.indent.smudge '.git_indent_smudge.sh %f'
 if [ $? -ne 0 ]; then
 	echo "git config filter.indent.smudge failed: $?"
 	exit 1
