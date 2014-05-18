@@ -28,6 +28,9 @@ echo "Your project path: $project_path"
 echo "export PATH=\$PATH:$project_path/sbin" >> $HOME/.bashrc
 export PATH=$PATH:$project_path/sbin
 
+cp $project_path/sbin/git_indent_clean.sh $project_path/sbin/.git_indent_clean.sh
+cp $project_path/sbin/git_indent_smudge.sh $project_path/sbin/.git_indent_smudge.sh
+
 # common config
 # user name
 echo "Please input your git user name:"
@@ -107,13 +110,13 @@ if [ $? -ne 0 ]; then
 fi
 
 # filter
-git config filter.indent.clean 'git_indent_clean.sh'
+git config filter.indent.clean '.git_indent_clean.sh'
 if [ $? -ne 0 ]; then
 	echo "git config filter.indent.clean failed: $?"
 	exit 1
 fi
 
-git config filter.indent.smudge 'git_indent_smudge.sh'
+git config filter.indent.smudge '.git_indent_smudge.sh'
 if [ $? -ne 0 ]; then
 	echo "git config filter.indent.smudge failed: $?"
 	exit 1
