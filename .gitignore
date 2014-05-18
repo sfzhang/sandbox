@@ -40,3 +40,7 @@ Makefile
 
 # ignore all tags file for ctags
 tags
+
+# ignore .git_indent_clean.sh and .git_indent_smudge.sh
+.git_indent_clean.sh
+.git_indent_smudge.sh
