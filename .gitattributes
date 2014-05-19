@@ -38,6 +38,7 @@ README*		text
 *.install	text
 *.config	text
 *.sh		text
+*.inc       text
 
 # indent filter
 README*		filter=indent
@@ -50,6 +51,7 @@ README*		filter=indent
 *.install	filter=indent
 *.config	filter=indent
 *.sh		filter=indent
+*.inc       filter=indent
 *.cc		filter=indent
 *.cpp		filter=indent
 *.[cCh]		filter=indent
